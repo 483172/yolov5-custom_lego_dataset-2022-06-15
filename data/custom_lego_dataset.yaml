@@ -1,25 +1,33 @@
+# Dataset origin and definition file for use with:
 # YOLOv5 🚀 by Ultralytics, GPL-3.0 license
-# COCO128 dataset https://www.kaggle.com/ultralytics/coco128 (first 128 images from COCO train2017) by Ultralytics
-# Example usage: python train.py --data coco128.yaml
-# parent
-# ├── yolov5
-# └── datasets
-#     └── coco128  ← downloads here (7 MB)
+# Dataset has been rearranged and bounding box files have been converted to work
 
+# Original dataset:
+# Name:     Synthetic Lego brick dataset for object detection
+# Webpage:  https://www.kaggle.com/datasets/mantasgr/synthetic-lego-brick-dataset-for-object-detection 
+# Author:   Mantas Gribulis
 
-#/drive/MyDrive/School/Saxion/Leerjaar 3/Machine Learning/Eindopdracht/lego_dataset/train_data
+# Convertion tool:
+# Name:     Convert PascalVOC Annotations to YOLO
+# Website:  https://gist.github.com/Amir22010/a99f18ca19112bc7db0872a36a03a1ec
+# Author:   Amir22010, forked from myounus96
 
+# Dataset has been stored in peronal Google Drive with path: /School/Saxion/Leerjaar 3/Machine Learning/Eindopdracht/lego_dataset/train_data/
 
-# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-train: ../drive/MyDrive/School/Saxion/Leerjaar 3/Machine Learning/Eindopdracht/lego_dataset/train_data/train  # train images (relative to 'path') 128 images
-val: ../drive/MyDrive/School/Saxion/Leerjaar 3/Machine Learning/Eindopdracht/lego_dataset/train_data/val # val images (relative to 'path') 128 images
-test:  # test images (optional)
+# Example usage: python train.py --data custom_lego_dataset.yaml
 
+# Train/val/test sets as  1) dir:   path/to/imgs, 
+#                         2) file:  path/to/imgs.txt or
+#                         3) list:  [path/to/imgs1, path/to/imgs2, ..]
+
+train: ../drive/MyDrive/School/Saxion/Leerjaar 3/Machine Learning/Eindopdracht/lego_dataset/train_data/train  # train images (relative to 'path') 2500 images
+val: ../drive/MyDrive/School/Saxion/Leerjaar 3/Machine Learning/Eindopdracht/lego_dataset/train_data/val # val images (relative to 'path') 547 images
+test:  # test images (optional) 0 images
 
 # Classes
 nc: 6  # number of classes
 names: ['brick_2x4', 'plate_2x2', 'plate_1x2', 'plate_2x4', 'brick_1x6', 'brick_2x2']  # class names
 
-
+# Example for downloading dataset:
 # Download script/URL (optional)
 #download: https://ultralytics.com/assets/coco128.zip
